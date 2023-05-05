@@ -1,13 +1,13 @@
-# SRA_GEM
+# SRA2GEM
 
 ##Lab Overview
+In this lab you will learn how to pull SRA files using the SRA-toolkit. Then you will learn how to construct a GEM (gene-expression matrix). To do this, we will utilize GEMMaker, a nextflow workflow that runs all the steps needed to turn a set of fastq files to a GEM. Lastly, we will visualize the GEM as a histogram to analyze the levels of expression in the files of interest. 
 
 ##Learning Objectives
 1. *Identify human SRA files from the SRA archive*
 2. *Create a GEM*
 3. *Normalize the GEM*
 4. *Analyze the GEM*
-5. Build GCN network from GEM
 
 ##Lab Tasks
 *Step 1: Download the sra-toolkit*
@@ -39,9 +39,7 @@ cd singularity
 make -C builddir
 sudo make -C builddir install
 
-*Step 8: Run GEMMaker*
-nextflow run systemsgenetics/gemmaker
-     should create three output files (FPKM, raw, TPM)
+*Step 8: Make sure all necessary binaries are in your PATH*
 
 *Step 9: Download and index reference fasta file for GEM*
 wget /path/to/file
